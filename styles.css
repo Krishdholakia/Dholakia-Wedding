@@ -8,99 +8,100 @@ body {
     font-family: 'Lato', sans-serif;
     background-color: #003e31; /* Main Background Green */
     color: #d9c08a; /* Gold Text Color */
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+.header {
+    background-color: #002a29; /* Darker green for header */
+    color: #d9c08a; /* Gold */
     padding: 20px;
     text-align: center;
 }
 
-header {
-    padding: 50px 20px;
-    background-color: #003e31; /* Header Background Matching Logo Green */
+.header-title {
+    font-family: 'Snell Roundhand', cursive;
+    font-size: 48px; /* Larger title size */
+    margin-bottom: 10px;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background-color: #003e31; /* Green Background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 }
 
 .logo {
-    max-width: 150px;
-    margin-bottom: 20px;
+    max-width: 300px; /* Increased logo size */
+    opacity: 0; /* Start hidden for animation */
+    transform: scale(0.7); /* Start smaller for animation */
+    transition: opacity 1s, transform 1s; /* Smooth transition */
 }
 
-header h1 {
+.intro-text {
+    opacity: 0; /* Start hidden for animation */
+    transform: scale(0.8); /* Start slightly smaller */
+    transition: opacity 1s, transform 1s; /* Smooth transition */
+    margin-top: 20px;
+}
+
+.intro-text h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    color: #d9c08a; /* Gold */
-}
-
-header h2 {
-    font-size: 36px;
+    font-size: 50px; /* Increased heading size */
     color: #f1e9d2; /* Light Gold */
-}
-
-.date {
-    font-size: 20px;
-    color: #d9c08a;
-    margin: 10px 0;
-}
-
-.countdown {
-    font-size: 24px;
-    color: #d9c08a; /* Gold */
-    margin: 20px 0;
 }
 
 section {
     margin: 50px 0;
-    padding: 20px;
+    padding: 40px; /* Increased padding */
     background: rgba(255, 255, 255, 0.1); /* Light overlay for sections */
     border-radius: 10px;
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(20px); /* Start below */
+    transition: opacity 1s, transform 1s; /* Smooth transition */
 }
 
-section h2 {
+section.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide up */
+}
+
+.love-story {
+    font-size: 22px; /* Increased font size */
+}
+
+.love-story h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 36px; /* Increased heading size */
     color: #d9c08a; /* Gold */
     margin-bottom: 20px;
 }
 
-section p {
-    font-size: 18px;
-    margin: 10px 0;
+.love-story p {
+    margin: 15px 0; /* Increased margin for better spacing */
+    color: #f1e9d2; /* Light Gold */
+}
+
+.festivities {
+    font-size: 20px; /* Increased font size */
+}
+
+.festivities h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; /* Increased heading size */
+    color: #d9c08a; /* Gold */
+    margin-bottom: 20px;
+}
+
+.festivities p {
+    margin: 15px 0; /* Increased margin for better spacing */
     color: #f1e9d2; /* Light Gold */
 }
 
 .festivities ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.festivities li {
-    font-size: 18px;
-    color: #d9c08a;
-    margin: 5px 0;
-}
-
-.gallery {
-    padding: 20px;
-}
-
-.image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.image-grid img {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-}
-
-footer {
-    padding: 20px;
-    background-color: #002a29; /* Darker green for footer */
-    color: #d9c08a; /* Gold Text */
-    border-radius: 10px;
-}
+    list-style-type: none
