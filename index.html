@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokshi & Rushi's Dholakia Wedding</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="E8DE81A8-05A9-4024-944E-AA013E96CD2A.jpeg" alt="Dholakia Wedding Logo" class="logo">
+            <h1>Welcome to the Dholakia Wedding</h1>
+            <h2>Mokshi & Rushi</h2>
+            <p class="date">Celebrating Love Starting December 8, 2024</p>
+            <div class="countdown" id="countdown-timer">Countdown Timer Here</div>
+        </header>
+
+        <section class="love-story">
+            <h2>Our Love Story</h2>
+            <p>Mokshi and Rushi's love is a beautiful journey that started with a simple glance and has blossomed into a deep, lasting bond. Their story is one of adventure, laughter, and unwavering support for one another. As they embark on this new chapter together, they invite you to share in their joy and love.</p>
+        </section>
+
+        <section class="festivities">
+            <h2>Wedding Festivities</h2>
+            <p>The wedding celebrations will take place in Surat, where love and joy will fill the air. Join us for a series of unforgettable events, filled with culture, traditions, and a lot of fun!</p>
+            <ul>
+                <li><strong>Sangeet:</strong> A night of music and dance.</li>
+                <li><strong>Mehndi:</strong> Adorn yourself with beautiful henna designs.</li>
+                <li><strong>Wedding Ceremony:</strong> A beautiful union of two souls.</li>
+                <li><strong>Reception:</strong> An evening to celebrate love and togetherness.</li>
+            </ul>
+        </section>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <p>Enjoy a glimpse into the moments that brought Mokshi and Rushi together. A collection of memories that reflect their journey and love.</p>
+            <div class="image-grid">
+                <img src="https://via.placeholder.com/150" alt="Gallery Image 1">
+                <img src="https://via.placeholder.com/150" alt="Gallery Image 2">
+                <img src="https://via.placeholder.com/150" alt="Gallery Image 3">
+                <img src="https://via.placeholder.com/150" alt="Gallery Image 4">
+            </div>
+        </section>
+
+        <footer>
+            <p>We can’t wait to celebrate with you!</p>
+        </footer>
+    </div>
+
+    <script>
+        // Countdown Timer Script
+        const countdownDate = new Date("Dec 8, 2024 00:00:00").getTime();
+        const countdownTimer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown-timer").innerHTML = 
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown-timer").innerHTML = "Wedding Day!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
