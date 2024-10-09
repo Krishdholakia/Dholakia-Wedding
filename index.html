@@ -5,70 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokshi & Rushi's Dholakia Wedding</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;300&family=Snell+Roundhand&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="E8DE81A8-05A9-4024-944E-AA013E96CD2A.jpeg" alt="Dholakia Wedding Logo" class="logo">
-            <h1>Welcome to the Dholakia Wedding</h1>
-            <h2>Mokshi & Rushi</h2>
-            <p class="date">Celebrating Love Starting December 8, 2024</p>
-            <div class="countdown" id="countdown-timer">Countdown Timer Here</div>
-        </header>
+    <header class="header">
+        <h1 class="header-title">Dholakia Wedding</h1>
+    </header>
 
-        <section class="love-story">
-            <h2>Our Love Story</h2>
-            <p>Mokshi and Rushi's love is a beautiful journey that started with a simple glance and has blossomed into a deep, lasting bond. Their story is one of adventure, laughter, and unwavering support for one another. As they embark on this new chapter together, they invite you to share in their joy and love.</p>
-        </section>
+    <section class="hero">
+        <img src="E8DE81A8-05A9-4024-944E-AA013E96CD2A.jpeg" alt="Dholakia Wedding Logo" class="logo" id="logo">
+        <div class="intro-text" id="intro-text">
+            <h2>This year It’s Mokshi and Rushi</h2>
+        </div>
+    </section>
 
-        <section class="festivities">
-            <h2>Wedding Festivities</h2>
-            <p>The wedding celebrations will take place in Surat, where love and joy will fill the air. Join us for a series of unforgettable events, filled with culture, traditions, and a lot of fun!</p>
-            <ul>
-                <li><strong>Sangeet:</strong> A night of music and dance.</li>
-                <li><strong>Mehndi:</strong> Adorn yourself with beautiful henna designs.</li>
-                <li><strong>Wedding Ceremony:</strong> A beautiful union of two souls.</li>
-                <li><strong>Reception:</strong> An evening to celebrate love and togetherness.</li>
-            </ul>
-        </section>
+    <section class="love-story" id="love-story">
+        <h2>Our Love Story</h2>
+        <p>Mokshi and Rushi's love story is a tapestry of beautiful moments woven together through time. Their journey began with serendipity and blossomed into a deep connection filled with joy, laughter, and shared dreams. From their first encounter to their cherished memories, every moment is a testament to their bond.</p>
+        <p>As they navigated the ups and downs of life, they supported each other with unwavering love and encouragement. Their story is not just about finding love, but about creating a partnership that enriches their lives and the lives of those around them. Each chapter of their journey has been filled with adventure, passion, and a commitment to grow together.</p>
+        <p>As they prepare to celebrate their union, Mokshi and Rushi invite you to join them in their journey of love, surrounded by family and friends who have witnessed their beautiful relationship unfold.</p>
+    </section>
 
-        <section class="gallery">
-            <h2>Gallery</h2>
-            <p>Enjoy a glimpse into the moments that brought Mokshi and Rushi together. A collection of memories that reflect their journey and love.</p>
-            <div class="image-grid">
-                <img src="https://via.placeholder.com/150" alt="Gallery Image 1">
-                <img src="https://via.placeholder.com/150" alt="Gallery Image 2">
-                <img src="https://via.placeholder.com/150" alt="Gallery Image 3">
-                <img src="https://via.placeholder.com/150" alt="Gallery Image 4">
-            </div>
-        </section>
-
-        <footer>
-            <p>We can’t wait to celebrate with you!</p>
-        </footer>
-    </div>
+    <section class="festivities" id="festivities">
+        <h2>Wedding Festivities</h2>
+        <p>The wedding celebrations will commence in Surat, where love and joy will fill the air as families and friends come together to honor Mokshi and Rushi’s union. This joyous occasion will be steeped in rich traditions and unforgettable moments. Here’s a glimpse into the festivities:</p>
+        <ul>
+            <li>
+                <strong>Garba:</strong>
+                <p>The Garba is a vibrant musical celebration that unites family and friends through dance and song. Expect a night filled with lively performances, laughter, and memories that will be cherished forever. This is the time for everyone to let loose, have fun, and celebrate the love shared by Mokshi and Rushi.</p>
+            </li>
+            <li>
+                <strong>Mehndi:</strong>
+                <p>The Mehndi ceremony is a colorful celebration where henna designs are intricately applied to the bride and her loved ones. This ritual symbolizes joy and beauty, creating an atmosphere of creativity and festivity as everyone comes together to share in the excitement and anticipation of the wedding.</p>
+            </li>
+            <li>
+                <strong>Wedding Ceremony:</strong>
+                <p>The wedding ceremony is the heart of the celebrations, where Mokshi and Rushi will pledge their love and commitment to each other in front of family and friends. This sacred event will incorporate beautiful rituals and traditions that reflect their love, culture, and family values, making it a memorable occasion for everyone involved.</p>
+            </li>
+            <li>
+               </ul>
+    </section>
 
     <script>
-        // Countdown Timer Script
-        const countdownDate = new Date("Dec 8, 2024 00:00:00").getTime();
-        const countdownTimer = setInterval(() => {
-            const now = new Date().getTime();
-            const distance = countdownDate - now;
+        // Logo and Intro Text Animation
+        window.onload = function() {
+            const logo = document.getElementById('logo');
+            const introText = document.getElementById('intro-text');
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Logo animation
+            logo.style.opacity = 0;
+            logo.style.transform = 'scale(0.7)'; // Start slightly smaller
+            introText.style.opacity = 0;
+            introText.style.transform = 'scale(0.8)'; // Start slightly smaller
 
-            document.getElementById("countdown-timer").innerHTML = 
-                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            setTimeout(() => {
+                logo.style.transition = 'opacity 1s, transform 1s';
+                logo.style.opacity = 1;
+                logo.style.transform = 'scale(1.1)'; // Make it bigger
 
-            if (distance < 0) {
-                clearInterval(countdownTimer);
-                document.getElementById("countdown-timer").innerHTML = "Wedding Day!";
-            }
-        }, 1000);
+                // Intro text animation
+                introText.style.transition = 'opacity 1s, transform 1s';
+                introText.style.opacity = 1;
+                introText.style.transform = 'scale(1.5)'; // Enlarge text
+                
+                setTimeout(() => {
+                    introText.style.transform = 'scale(1)'; // Shrink back to normal size
+                }, 1500);
+            }, 1000);
+        };
+
+        // Scroll Animation for Sections
+        const sections = document.querySelectorAll('section');
+        const options = {
+            root: null,
+            threshold: 0.1,
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+        
+        sections.forEach(section => {
+            observer.observe(section);
+        });
     </script>
 </body>
 </html>
